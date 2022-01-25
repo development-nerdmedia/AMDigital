@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: inherit; }
+
+:root {
+  --fuente-poppins: "Poppins", sans-serif;
+  --fuente-inter: "Inter", sans-serif;
+  --fuente-anonymus: "Anonymous Pro", monospace;
+  --color-green: #c7ff00; }
+
+main {
+  overflow: hidden; }
+
+.container {
+  width: 85%;
+  max-width: 1580px;
+  margin: 0 auto; }
+
+header {
+  padding: 28px 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2; }
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  nav .navigation ul {
+    display: flex;
+    text-align: center; }
+    nav .navigation ul li {
+      list-style: none;
+      padding: 0 14px; }
+      nav .navigation ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        font-family: var(--fuente-poppins);
+        letter-spacing: 2px;
+        font-weight: 700;
+        line-height: 27px; }
+    nav .navigation ul li.idioma a.es {
+      margin-right: 10px; }
+    nav .navigation ul li.idioma a.en {
+      opacity: 0.5; }
+    nav .navigation ul li.menuPortafolio a {
+      position: relative; }
+    nav .navigation ul li.menuPortafolio a::before {
+      content: "Checa nuestro";
+      font-family: var(--fuente-anonymus);
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 24px;
+      position: absolute;
+      top: -15px;
+      letter-spacing: normal; }
+  nav a.btn {
+    color: white;
+    padding: 9px 44px;
+    border: 1px solid #c7ff00;
+    border-radius: 10px;
+    font-family: var(--fuente-inter);
+    font-size: 26px;
+    font-weight: 500;
+    transition: all 0.2s linear; }
+    nav a.btn:hover {
+      background-color: var(--color-green);
+      color: #000; }
+
+/*HOME*/
+.home {
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  align-items: center; }
+  .home .content {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(31px);
+    position: relative; }
+    .home .content .imgHome {
+      display: none;
+      animation: mostrar 0.8s ease;
+      animation-fill-mode: forwards; }
+    .home .content .imgHome1 {
+      position: absolute;
+      left: 0;
+      top: -20px; }
+    .home .content .imgHome2 {
+      position: absolute;
+      bottom: -151px;
+      left: 205px; }
+    .home .content .imgHome3 {
+      position: absolute;
+      bottom: -151px;
+      right: 138px; }
+    .home .content .imgHome4 {
+      position: absolute;
+      right: 0;
+      top: -81px; }
+
+@keyframes mostrar {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+    .home .content h1 {
+      font-size: 60px;
+      line-height: 85px;
+      font-weight: 700;
+      font-family: var(--fuente-poppins);
+      color: white;
+      width: 850px;
+      padding-bottom: 20px;
+      cursor: default; }
+      .home .content h1 span {
+        background-color: var(--color-green);
+        color: #000;
+        height: 54px;
+        padding: 0 2px;
+        cursor: default; }
+    .home .content p {
+      font-size: 24px;
+      line-height: 36px;
+      font-family: var(--fuente-inter);
+      font-weight: 400;
+      color: white;
+      cursor: default; }
+    .home .content a.noClick {
+      border: 2px solid var(--color-green);
+      border-radius: 50%;
+      padding: 30px 22px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 700;
+      font-family: var(--fuente-poppins);
+      letter-spacing: 2px;
+      margin-top: 36px;
+      line-height: 17.5px;
+      transition: all 0.2s linear; }
+      .home .content a.noClick:hover {
+        background-color: var(--color-green);
+        color: #000; }
+  .home img.flecha {
+    position: absolute;
+    bottom: 54px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0%);
+    transform: translate(-50%, 0%);
+    animation-name: up-down;
+    animation-duration: 3s;
+    animation-iteration-count: infinite; }
+
+@keyframes up-down {
+  0% {
+    transform: translate(-50%, 0); }
+  50% {
+    transform: translate(-50%, -50px); }
+  100% {
+    transform: translate(-50%, 0); } }
+
+.marketers {
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  align-items: center; }

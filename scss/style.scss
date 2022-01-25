@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: inherit;
+}
+
+:root {
+  --fuente-poppins: "Poppins", sans-serif;
+  --fuente-inter: "Inter", sans-serif;
+  --fuente-anonymus: "Anonymous Pro", monospace;
+  --color-green: #c7ff00;
+}
+
+main {
+  overflow: hidden;
+}
+
+.container {
+  width: 85%;
+  max-width: 1580px;
+  margin: 0 auto;
+}
+
+header {
+  padding: 28px 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .navigation {
+    ul {
+      display: flex;
+      text-align: center;
+      li {
+        list-style: none;
+        padding: 0 14px;
+        a {
+          text-decoration: none;
+          color: white;
+          font-size: 18px;
+          font-family: var(--fuente-poppins);
+          letter-spacing: 2px;
+          font-weight: 700;
+          line-height: 27px;
+        }
+      }
+      li.idioma {
+        a.es {
+          margin-right: 10px;
+        }
+        a.en {
+          opacity: 0.5;
+        }
+      }
+      li.menuPortafolio {
+        a {
+          position: relative;
+        }
+        a::before {
+          content: "Checa nuestro";
+          font-family: var(--fuente-anonymus);
+          font-size: 10px;
+          font-weight: 400;
+          line-height: 24px;
+          position: absolute;
+          top: -15px;
+          letter-spacing: normal;
+        }
+      }
+    }
+  }
+  a.btn {
+    color: white;
+    padding: 9px 44px;
+    border: 1px solid #c7ff00;
+    border-radius: 10px;
+    font-family: var(--fuente-inter);
+    font-size: 26px;
+    font-weight: 500;
+    transition: all 0.2s linear;
+    &:hover {
+      background-color: var(--color-green);
+      color: #000;
+    }
+  }
+}
+
+/*HOME*/
+
+.home {
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  .content {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(31px);
+    position: relative;
+    .imgHome {
+      display: none;
+      animation: mostrar 0.8s ease;
+      animation-fill-mode: forwards;
+    }
+    .imgHome1 {
+      position: absolute;
+      left: 0;
+      top: -20px;
+    }
+    .imgHome2 {
+      position: absolute;
+      bottom: -151px;
+      left: 205px;
+    }
+    .imgHome3 {
+      position: absolute;
+      bottom: -151px;
+      right: 138px;
+    }
+    .imgHome4 {
+      position: absolute;
+      right: 0;
+      top: -81px;
+    }
+    @keyframes mostrar {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    h1 {
+      font-size: 60px;
+      line-height: 85px;
+      font-weight: 700;
+      font-family: var(--fuente-poppins);
+      color: white;
+      width: 850px;
+      padding-bottom: 20px;
+      cursor: default;
+      span {
+        background-color: var(--color-green);
+        color: #000;
+        height: 54px;
+        padding: 0 2px;
+        cursor: default;
+      }
+    }
+    p {
+      font-size: 24px;
+      line-height: 36px;
+      font-family: var(--fuente-inter);
+      font-weight: 400;
+      color: white;
+      cursor: default;
+    }
+    a.noClick {
+      border: 2px solid var(--color-green);
+      border-radius: 50%;
+      padding: 30px 22px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 700;
+      font-family: var(--fuente-poppins);
+      letter-spacing: 2px;
+      margin-top: 36px;
+      line-height: 17.5px;
+      transition: all 0.2s linear;
+      &:hover {
+        background-color: var(--color-green);
+        color: #000;
+      }
+    }
+  }
+  img.flecha {
+    position: absolute;
+    bottom: 54px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0%);
+    transform: translate(-50%, 0%);
+    animation-name: up-down;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes up-down {
+    0% {
+      // bottom: -150px;
+      transform: translate(-50%, 0);
+    }
+    50% {
+      // bottom: -100px;
+      transform: translate(-50%, -50px);
+    }
+    100% {
+      // bottom: -150px;
+      transform: translate(-50%, 0);
+    }
+  }
+}
+
+.marketers {
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+}
