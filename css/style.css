@@ -64,13 +64,14 @@ nav {
       letter-spacing: normal; }
   nav a.btn {
     color: white;
-    padding: 9px 44px;
+    padding: 16px 58px;
     border: 1px solid #c7ff00;
     border-radius: 10px;
     font-family: var(--fuente-inter);
-    font-size: 26px;
+    font-size: 18px;
     font-weight: 500;
-    transition: all 0.2s linear; }
+    transition: all 0.2s linear;
+    cursor: pointer; }
     nav a.btn:hover {
       background-color: var(--color-green);
       color: #000; }
@@ -91,7 +92,7 @@ nav {
     .home .content .imgHome {
       display: none;
       animation: mostrar 0.8s ease;
-      animation-fill-mode: forwards; }
+      animation-fill-mode: forwards !important; }
     .home .content .imgHome1 {
       position: absolute;
       left: 0;
@@ -114,20 +115,27 @@ nav {
     opacity: 0; }
   100% {
     opacity: 1; } }
+
+@keyframes desaparecer {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    display: none; } }
     .home .content h1 {
-      font-size: 60px;
+      font-size: 64px;
       line-height: 85px;
       font-weight: 700;
       font-family: var(--fuente-poppins);
       color: white;
-      width: 850px;
+      width: 1144px;
       padding-bottom: 20px;
       cursor: default; }
       .home .content h1 span {
         background-color: var(--color-green);
         color: #000;
-        height: 54px;
-        padding: 0 2px;
+        height: 54px !important;
+        padding: 0 15px;
         cursor: default; }
     .home .content p {
       font-size: 24px;
@@ -171,7 +179,6 @@ nav {
     transform: translate(-50%, 0); } }
 
 .marketers {
-  height: 100vh;
-  background-color: #fff;
+  padding: 85px 0px;
   display: flex;
   align-items: center; }
