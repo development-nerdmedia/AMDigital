@@ -13,3 +13,61 @@ $(document).ready(function () {
         $("#imgHome4").css("display", "none");
     });
 });
+
+const root = document.documentElement;
+const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
+const marqueeContent = document.querySelector("ul.marquee-content");
+const marqueeContent2 = document.querySelector("ul.marquee-content2");
+
+root.style.setProperty("--marquee-elements", marqueeContent.children.length);
+root.style.setProperty("--marquee-elements", marqueeContent2.children.length);
+
+for (let i = 0; i < marqueeElementsDisplayed; i++) {
+    marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+    marqueeContent2.appendChild(marqueeContent2.children[i].cloneNode(true));
+}
+
+/* elementos de contacto en pantalla */
+const nombre = document.querySelector("#full-name");
+const telephone = document.querySelector("#telephone");
+const message = document.querySelector("#message");
+
+document.addEventListener("click", function (e) {
+    if (e.target.type == "submit") {
+        if (nombre.value.length === 0) {
+            if ($("#full-name2.focus-visible")) {
+                nombre.classList.add("falto");
+            }
+            else {
+                nombre.classList.remove("falto");
+            }
+        }
+        if (telephone.value.length === 0) {
+
+            if ($("#telephone2.focus-visible")) {
+                telephone.classList.add("falto");
+            }
+            else {
+                telephone.classList.remove("falto");
+            }
+        }
+        // if (email.value.length === 0) {
+
+        //     if ($("#telephone2.focus-visible")) {
+        //         email.classList.add("falto");
+        //     }
+        //     else {
+        //         email.classList.remove("falto");
+        //     }
+        // }
+        if (message.value.length === 0) {
+
+            if ($("#telephone2.focus-visible")) {
+                message.classList.add("falto");
+            }
+            else {
+                message.classList.remove("falto");
+            }
+        }
+    }
+})
