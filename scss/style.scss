@@ -16,7 +16,7 @@
   --fuente-anonymus: "Anonymous Pro", monospace;
   --fuente-epilogue: "Epilogue", sans-serif;
   --color-green: #c7ff00;
-  --marquee-width: 80vw;
+  --marquee-width: 100%;
   --marquee-height: 20vh;
   /* --marquee-elements: 12; */ /* defined with JavaScript */
   --marquee-elements-displayed: 1;
@@ -60,7 +60,7 @@ nav {
       color: #fff;
       display: flex;
       align-items: center;
-      width: 200px;
+      // width: 200px;
       img {
         padding-right: 15px;
       }
@@ -117,6 +117,7 @@ nav {
     font-size: 18px;
     font-weight: 500;
     transition: all 0.2s linear;
+    text-decoration: none;
     cursor: pointer;
     &:hover {
       background-color: var(--color-green);
@@ -261,10 +262,10 @@ nav {
     h2 {
       font-family: var(--fuente-anonymus);
       font-weight: 700;
-      font-size: 46px;
+      font-size: 60px;
     }
     .content {
-      padding-bottom: 50px;
+      padding-bottom: 85px;
       display: flex;
       align-items: flex-start;
       .part1 {
@@ -272,7 +273,7 @@ nav {
         p {
           font-family: var(--fuente-inter);
           font-weight: 400;
-          font-size: 18px;
+          font-size: 24px;
           padding-top: 25px;
           margin-bottom: 28px;
         }
@@ -282,6 +283,11 @@ nav {
         display: flex;
         align-items: center;
         justify-content: flex-end;
+        img {
+          transform: scale(1.2);
+          padding-top: 50px;
+          padding-right: 30px;
+        }
       }
     }
   }
@@ -304,7 +310,7 @@ nav {
   //   white-space: nowrap;
   // }
   .marquee {
-    // width: 100%;
+    width: var(--marquee-width);
     // background-color: #111;
     overflow: hidden;
     position: relative;
@@ -367,7 +373,7 @@ section.portfolio {
     flex-wrap: wrap;
     justify-content: space-between;
     padding-top: 80px;
-    padding-bottom: 367px;
+    padding-bottom: 16vw;
     .item:nth-child(even) {
       transform: translateY(23.5vw);
     }
@@ -655,5 +661,143 @@ footer {
     font-size: 16.8px;
     padding: 10px 0;
     text-align: center;
+  }
+}
+
+img.menubar {
+  display: none;
+}
+
+@media (max-width: 1440px) {
+  header {
+    padding: 20px 0;
+  }
+  .home .content h1 {
+    font-size: 60px;
+    line-height: 75px;
+  }
+  .home .content a.noClick {
+    padding: 28px 20px;
+  }
+  nav .logo a img {
+    width: 67px;
+  }
+  .marketers .container.containermarketers h2 {
+    font-size: 46px;
+  }
+  .marketers .container.containermarketers .content .part1 p {
+    font-size: 18px;
+  }
+  .marketers .container.containermarketers .content .part2 img {
+    transform: none;
+    padding-right: 0px;
+    padding-top: 12px;
+  }
+  .marketers .marquee-content {
+    font-size: 100px;
+  }
+}
+
+@media (max-width: 1024px) {
+  nav a.btn {
+    padding: 13px 41px;
+  }
+  nav .logo a {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  nav .logo a img {
+    padding-right: 10px;
+  }
+  .container {
+    width: 90%;
+  }
+  .home .content h1 {
+    font-size: 47px;
+    width: auto;
+    line-height: 65px;
+  }
+  .marketers .container.containermarketers {
+    width: 90%;
+  }
+  .marketers .container.containermarketers h2 {
+    font-size: 35px;
+  }
+  section.portfolio .title h2 {
+    font-size: 45px;
+  }
+  section.portfolio .title p {
+    font-size: 20px;
+  }
+  section.portfolio .items .item .img {
+    padding: 51px 51px;
+  }
+  section.portfolio .items .item .info {
+    padding: 18px 22px;
+  }
+  section.portfolio .items .item .info h3 {
+    font-size: 25px;
+  }
+  section.portfolio .items {
+    padding-bottom: 10vw;
+  }
+  section.portfolio .items .item:nth-child(even) {
+    transform: translateY(15vw);
+  }
+  section.portfolio .items .item {
+    margin-bottom: 137px;
+  }
+  section.services .title h2 {
+    font-size: 50px;
+  }
+  section.services .items-services .item-services .title-services h3 {
+    font-size: 35px;
+  }
+  section.services .items-services .item-services .info-services p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  section.services .items-services .item-services .info-services .lista {
+    padding-top: 26px;
+  }
+  section.services .items-services .item-services .info-services .lista ul li {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  section.services .items-services .item-services .img-services img {
+    width: 65px;
+  }
+  section.services {
+    padding: 50px 0;
+  }
+  section.contact {
+    padding: 70px 0;
+  }
+  section.contact h2 {
+    font-size: 50px;
+  }
+  section.contact p {
+    font-size: 18px;
+  }
+  section.contact .form {
+    padding-top: 50px;
+  }
+}
+
+@media (max-width: 1024px) and (min-height: 1000px) {
+  header {
+    padding: 28px 0;
+  }
+}
+
+@media (max-width: 920px) {
+  .navigation {
+    display: none;
+  }
+  nav a.btn {
+    display: none;
+  }
+  img.menubar {
+    display: block;
   }
 }
