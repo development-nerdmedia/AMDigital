@@ -14,6 +14,11 @@ $(document).ready(function () {
     });
 });
 
+var mediaqueryList = window.matchMedia("(max-width: 426px)");
+if (mediaqueryList.matches) {
+    document.querySelector('.mostrar').removeAttribute('id');
+}
+
 const root = document.documentElement;
 const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
 const marqueeContent = document.querySelector("ul.marquee-content");
@@ -26,6 +31,7 @@ for (let i = 0; i < marqueeElementsDisplayed; i++) {
     marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
     marqueeContent2.appendChild(marqueeContent2.children[i].cloneNode(true));
 }
+
 
 /* elementos de contacto en pantalla */
 const nombre = document.querySelector("#full-name");
@@ -71,3 +77,17 @@ document.addEventListener("click", function (e) {
         }
     }
 })
+
+
+
+/* -----slider home----- */
+
+const root1 = document.documentElement;
+const marqueeElementsDisplayed1 = getComputedStyle(root1).getPropertyValue("--marquee-elements-displayed1");
+const marqueeContent1 = document.querySelector("ul.marquee-content1");
+
+root1.style.setProperty("--marquee-elements1", marqueeContent1.children.length);
+
+for (let i = 0; i < marqueeElementsDisplayed1; i++) {
+    marqueeContent1.appendChild(marqueeContent1.children[i].cloneNode(true));
+}
