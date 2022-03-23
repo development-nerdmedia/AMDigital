@@ -12,7 +12,34 @@ $(document).ready(function () {
         $("#imgHome3").css("display", "none");
         $("#imgHome4").css("display", "none");
     });
+    var mediaqueryList1 = window.matchMedia("(max-width: 1300px) and (max-height: 1000px)");
+    if (mediaqueryList1.matches) {
+        $("#curiosidad").hover(function () {
+            $("#imgHome2").css("display", "block");
+            $("#imgHome3").css("display", "block");
+            $("#imgHome1").css("display", "none");
+            $("#imgHome4").css("display", "none");
+        }, function () {
+            $("#imgHome1").css("display", "none");
+            $("#imgHome2").css("display", "none");
+            $("#imgHome3").css("display", "none");
+            $("#imgHome4").css("display", "none");
+        });
+    }
 });
+
+document.addEventListener("click", function (e) {
+    if (e.target.closest(".menubtn")) {
+        document.querySelector(".menupage").classList.toggle("open");
+        // jQuery('body').addClass('scrollhidden');
+        document.querySelector("body").classList.toggle("scrollhidden");
+    }
+    if (e.target.closest(".cerrarr")) {
+        document.querySelector(".menupage").classList.toggle("open");
+        jQuery('body').removeClass('scrollhidden');
+
+    }
+})
 
 var mediaqueryList = window.matchMedia("(max-width: 426px)");
 if (mediaqueryList.matches) {
