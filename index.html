@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="icons/logo.svg" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
     <title>AM DIGITAL</title>
   </head>
   <body>
     <header>
-      <nav class="container">
+      <nav class="container" data-aos="fade-down">
         <div class="logo">
           <a href="index.html"
             ><img src="icons/logo.svg" alt="Logo-AMDIGITAL" />Estudio <br />
@@ -20,17 +21,35 @@
         <div class="navigation">
           <ul>
             <li class="idioma">
-              <a href="" class="es">ES</a
-              ><a href="en/index.html" class="en">EN</a>
+              <a href="" class="es hvr-underline-from-center">ES</a
+              ><a href="en/index.html" class="en hvr-underline-from-center"
+                >EN</a
+              >
             </li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li class="menuPortafolio"><a href="#portafolio">Portafolio</a></li>
             <li>
-              <a href=""><img src="icons/switch.svg" alt="" /></a>
+              <a href="#servicios" class="hvr-underline-from-center"
+                >Servicios</a
+              >
+            </li>
+            <li class="menuPortafolio">
+              <span>Checa nuestro</span
+              ><a href="#portafolio" class="hvr-underline-from-center"
+                >Portafolio</a
+              >
+            </li>
+            <li>
+              <!-- <a href=""><img src="icons/switch.svg" alt="" /></a> -->
+              <label class="switch">
+                <input type="checkbox" checked="" />
+              </label>
             </li>
           </ul>
         </div>
-        <a href="#contact" class="contacto btn">Contacto</a>
+        <a href="#contact">
+          <button id="btncontacto" class="contacto btn">
+            <span>Contacto</span>
+          </button>
+        </a>
         <img src="img/menu.png" class="menubar menubtn" alt="menu" />
       </nav>
     </header>
@@ -58,7 +77,7 @@
       </section>
       <section class="home" id="home">
         <div class="container">
-          <div class="content">
+          <div class="content" data-aos="fade-down">
             <img
               id="imgHome1"
               class="imgHome imgHome1"
@@ -93,7 +112,7 @@
               Publicidad
             </p>
             <a href="#contact" class="escribenos">Escribenos</a>
-            <a href="" class="noClick"
+            <a class="noClick"
               >NO <br />
               Click</a
             >
@@ -117,8 +136,16 @@
       <section class="marketers">
         <div class="container containermarketers">
           <div class="content">
-            <div class="part1">
-              <h2>World Wild Marketers<span>🔥</span></h2>
+            <div class="part1" data-aos="fade-right">
+              <h2>
+                World Wild Marketers<lottie-player
+                  src="img/95758-fire.json"
+                  background="transparent"
+                  speed="1"
+                  loop
+                  autoplay
+                ></lottie-player>
+              </h2>
               <p>
                 Creemos que el diseño puede resolver problemas. Unimos arte y
                 ciencia para crear proyectos de marca y sitios web que marca la
@@ -134,7 +161,7 @@
                 <a href="#contact">Empecemos un proyecto</a>
               </div>
             </div>
-            <div class="part2">
+            <div class="part2" data-aos="fade-left">
               <img src="img/fotoenmarco.png" alt="foto-perfil" />
             </div>
           </div>
@@ -159,8 +186,8 @@
         <div class="container">
           <div class="content-portfolio">
             <div class="title">
-              <h2>Portafolio</h2>
-              <p>Trabajo seleccionado</p>
+              <h2 data-aos="fade-down">Portafolio</h2>
+              <p data-aos="fade-up">Trabajo seleccionado</p>
             </div>
             <div class="items">
               <div class="item">
@@ -207,20 +234,20 @@
         <div class="container">
           <div class="content-services">
             <div class="title">
-              <h2>Servicios</h2>
-              <p class="bajada">
+              <h2 data-aos="fade-down">Servicios</h2>
+              <p class="bajada" data-aos="fade-up">
                 Estaremos encantados de atenderte y empezar un proyecto
               </p>
             </div>
             <div class="items-services">
               <div class="item-services">
-                <div class="img-services">
+                <div class="img-services" data-aos="fade-right">
                   <img src="icons/icon-diseño.svg" alt="" />
                 </div>
-                <div class="title-services">
+                <div class="title-services" data-aos="fade-right">
                   <h3>Branding Diseño</h3>
                 </div>
-                <div class="info-services">
+                <div class="info-services" data-aos="fade-left">
                   <p>
                     Creemos en las <b>marcas con propósito</b> que resultan
                     relevantes para sus clientes.
@@ -250,13 +277,13 @@
                 </div>
               </div>
               <div class="item-services">
-                <div class="img-services">
+                <div class="img-services" data-aos="fade-right">
                   <img src="icons/icon-web.svg" alt="" />
                 </div>
-                <div class="title-services">
+                <div class="title-services" data-aos="fade-right">
                   <h3>Desararrollo Web</h3>
                 </div>
-                <div class="info-services">
+                <div class="info-services" data-aos="fade-left">
                   <p>
                     Desarrollamos <b>experiencia digitales</b> para trasladar la
                     expresión de una marca a cualquier dispotivo. Analizamos
@@ -290,22 +317,22 @@
       <section class="contact" id="contact">
         <div class="container">
           <div class="content-contact">
-            <h2>Escríbenos ⚡</h2>
-            <p class="parrafo1">
+            <h2 data-aos="fade-down">Escríbenos ⚡</h2>
+            <p class="parrafo1" data-aos="fade-up">
               Estaremos encantados de atenderte. Tambien puedes escribirnos a
               <span> hola@amdigital.com</span>
             </p>
             <p class="parrafo2">
               Estaremos encantados de atenderte y empezar un proyecto
             </p>
-            <div class="form">
+            <div class="form" data-aos="fade-up">
               <form
                 class="formulario containerform"
                 id="fs-frm"
                 name="complaint-form"
                 accept-charset="utf-8"
                 action="thanks.html"
-                method="post"
+                method=""
               >
                 <fieldset>
                   <div class="form-group">
@@ -345,7 +372,9 @@
                       >Cuentanos sobre tu proyecto</label
                     >
                   </div>
-                  <input type="submit" value="Enviar" />
+                  <button id="btnenviar">
+                    <span> <input type="submit" value="Enviar" /></span>
+                  </button>
                 </fieldset>
               </form>
             </div>
@@ -378,6 +407,12 @@
       type="text/javascript"
       src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
     ></script>
+    <script src="js/confetti.js"></script>
+    <script
+      defer
+      src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
+    ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

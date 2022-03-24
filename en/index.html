@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="../icons/logo.svg" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="../css/style.css" />
     <title>AM DIGITAL</title>
   </head>
   <body>
     <header>
-      <nav class="container">
+      <nav class="container" data-aos="fade-down">
         <div class="logo">
           <a href="index.html"
             ><img src="../icons/logo.svg" alt="Logo-AMDIGITAL" />Creative <br />
@@ -20,17 +21,42 @@
         <div class="navigation">
           <ul>
             <li class="idioma">
-              <a href="../index.html" class="es" style="opacity: 0.5">ES</a
-              ><a href="index.html" class="en" style="opacity: 1">EN</a>
+              <a
+                href="../index.html"
+                class="es hvr-underline-from-center"
+                style="opacity: 0.5"
+                >ES</a
+              ><a
+                href="index.html"
+                class="en hvr-underline-from-center"
+                style="opacity: 1"
+                >EN</a
+              >
             </li>
-            <li><a href="#servicios">services</a></li>
-            <li class="menuPortafolio"><a href="#portafolio">Portfolio</a></li>
             <li>
-              <a href=""><img src="../icons/switch.svg" alt="" /></a>
+              <a href="#servicios" class="hvr-underline-from-center"
+                >Services</a
+              >
+            </li>
+            <li class="menuPortafolio">
+              <span>Checa nuestro</span
+              ><a href="#portafolio" class="hvr-underline-from-center"
+                >Portfolio</a
+              >
+            </li>
+            <li>
+              <!-- <a href=""><img src="../icons/switch.svg" alt="" /></a> -->
+              <label class="switch">
+                <input type="checkbox" checked="" />
+              </label>
             </li>
           </ul>
         </div>
-        <a href="#contact" class="contacto btn">Contact</a>
+        <a href="#contact">
+          <button id="btncontacto" class="contacto btn">
+            <span>Contacto</span>
+          </button>
+        </a>
         <img src="../img/menu.png" class="menubar menubtn" alt="menu" />
       </nav>
     </header>
@@ -58,7 +84,7 @@
       </section>
       <section class="home">
         <div class="container">
-          <div class="content">
+          <div class="content" data-aos="fade-down">
             <img
               id="imgHome1"
               class="imgHome imgHome1"
@@ -92,7 +118,7 @@
               Logos, Design, Branding, Social Media corporate image, Advertising
             </p>
             <a href="#contact" class="escribenos">Escribenos</a>
-            <a href="" class="noClick"
+            <a class="noClick"
               >NO <br />
               Click</a
             >
@@ -116,8 +142,16 @@
       <section class="marketers">
         <div class="container containermarketers">
           <div class="content">
-            <div class="part1">
-              <h2>World Wild Marketers<span>🔥</span></h2>
+            <div class="part1" data-aos="fade-right">
+              <h2>
+                World Wild Marketers<lottie-player
+                  src="../img/95758-fire.json"
+                  background="transparent"
+                  speed="1"
+                  loop
+                  autoplay
+                ></lottie-player>
+              </h2>
               <p>
                 We believe that design can solve problems. We unite art and
                 science to create brand projects and websites that make a
@@ -132,7 +166,7 @@
                 <a href="#contact">Let's start a project</a>
               </div>
             </div>
-            <div class="part2">
+            <div class="part2" data-aos="fade-left">
               <img src="../img/fotoenmarco.png" alt="foto-perfil" />
             </div>
           </div>
@@ -157,8 +191,8 @@
         <div class="container">
           <div class="content-portfolio">
             <div class="title">
-              <h2>Portfolio</h2>
-              <p>Selected work</p>
+              <h2 data-aos="fade-down">Portfolio</h2>
+              <p data-aos="fade-up">Selected work</p>
             </div>
             <div class="items">
               <div class="item">
@@ -205,20 +239,20 @@
         <div class="container">
           <div class="content-services">
             <div class="title">
-              <h2>Servicios</h2>
-              <p class="bajada">
+              <h2 data-aos="fade-down">Servicios</h2>
+              <p class="bajada" data-aos="fade-up">
                 We will be happy to assist you and start a project
               </p>
             </div>
             <div class="items-services">
               <div class="item-services">
-                <div class="img-services">
+                <div class="img-services" data-aos="fade-right">
                   <img src="../icons/icon-diseño.svg" alt="" />
                 </div>
-                <div class="title-services">
+                <div class="title-services" data-aos="fade-right">
                   <h3>Branding and Design</h3>
                 </div>
-                <div class="info-services">
+                <div class="info-services" data-aos="fade-left">
                   <p>
                     We believe in <b>purposeful brands</b> that are relevant to
                     your customers. <b>Nothing is random.</b> We go beyond
@@ -247,13 +281,13 @@
                 </div>
               </div>
               <div class="item-services">
-                <div class="img-services">
+                <div class="img-services" data-aos="fade-right">
                   <img src="../icons/icon-web.svg" alt="" />
                 </div>
-                <div class="title-services">
+                <div class="title-services" data-aos="fade-right">
                   <h3>Web development</h3>
                 </div>
-                <div class="info-services">
+                <div class="info-services" data-aos="fade-left">
                   <p>
                     We develop <b>experiencia digitales</b> to transfer the
                     expression of a brand to any device. We analyze users,
@@ -287,22 +321,22 @@
       <section class="contact" id="contact">
         <div class="container">
           <div class="content-contact">
-            <h2>Write us ⚡</h2>
-            <p class="parrafo1">
+            <h2 data-aos="fade-down">Write us ⚡</h2>
+            <p class="parrafo1" data-aos="fade-up">
               We will be happy to assist you. You can also write to
               <span> hola@amdigital.com</span>
             </p>
             <p class="parrafo2">
               We will be happy to assist you and start a project
             </p>
-            <div class="form">
+            <div class="form" data-aos="fade-up">
               <form
                 class="formulario containerform"
                 id="fs-frm"
                 name="complaint-form"
                 accept-charset="utf-8"
-                action="thanks.html"
-                method="post"
+                action="../thanks.html"
+                method=""
               >
                 <fieldset>
                   <div class="form-group">
@@ -377,6 +411,12 @@
       type="text/javascript"
       src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
     ></script>
+    <script src="../js/confetti.js"></script>
+    <script
+      defer
+      src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
+    ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="../js/main.js"></script>
   </body>
 </html>

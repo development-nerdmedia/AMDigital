@@ -1,3 +1,4 @@
+AOS.init();
 $(document).ready(function () {
     $("#curiosidad").hover(function () {
         $("#imgHome1").css("display", "block");
@@ -28,6 +29,23 @@ $(document).ready(function () {
     }
 });
 
+// start
+const start = () => {
+    setTimeout(function () {
+        confetti.start()
+    }, 000); // 1000 is time that after 1 second start the confetti ( 1000 = 1 sec)
+};
+
+//  Stop
+const stop = () => {
+    setTimeout(function () {
+        confetti.stop()
+    }, 7000); // 5000 is time that after 5 second stop the confetti ( 5000 = 5 sec)
+};
+
+// start();
+// stop();
+
 document.addEventListener("click", function (e) {
     if (e.target.closest(".menubtn")) {
         document.querySelector(".menupage").classList.toggle("open");
@@ -38,6 +56,10 @@ document.addEventListener("click", function (e) {
         document.querySelector(".menupage").classList.toggle("open");
         jQuery('body').removeClass('scrollhidden');
 
+    }
+    if (e.target.closest(".noClick")) {
+        start();
+        stop();
     }
 })
 
@@ -118,3 +140,4 @@ root1.style.setProperty("--marquee-elements1", marqueeContent1.children.length);
 for (let i = 0; i < marqueeElementsDisplayed1; i++) {
     marqueeContent1.appendChild(marqueeContent1.children[i].cloneNode(true));
 }
+
