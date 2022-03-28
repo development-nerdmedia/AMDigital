@@ -40,7 +40,7 @@ const start = () => {
 const stop = () => {
     setTimeout(function () {
         confetti.stop()
-    }, 7000); // 5000 is time that after 5 second stop the confetti ( 5000 = 5 sec)
+    }, 5000); // 5000 is time that after 5 second stop the confetti ( 5000 = 5 sec)
 };
 
 // start();
@@ -71,16 +71,29 @@ if (mediaqueryList.matches) {
 const root = document.documentElement;
 const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
 const marqueeContent = document.querySelector("ul.marquee-content");
-const marqueeContent2 = document.querySelector("ul.marquee-content2");
+// const marqueeContent2 = document.querySelector("ul.marquee-content2");
 
 root.style.setProperty("--marquee-elements", marqueeContent.children.length);
-root.style.setProperty("--marquee-elements", marqueeContent2.children.length);
+// root.style.setProperty("--marquee-elements", marqueeContent2.children.length);
 
 for (let i = 0; i < marqueeElementsDisplayed; i++) {
     marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
-    marqueeContent2.appendChild(marqueeContent2.children[i].cloneNode(true));
+    // marqueeContent2.appendChild(marqueeContent2.children[i].cloneNode(true));
 }
 
+/* -----slider2----- */
+
+const root2 = document.documentElement;
+const marqueeElementsDisplayed2 = getComputedStyle(root2).getPropertyValue("--marquee-elements-displayed2");
+const marqueeContent2 = document.querySelector("ul.marquee-content2");
+
+root2.style.setProperty("--marquee-elements2", marqueeContent2.children.length);
+
+for (let i = 0; i < marqueeElementsDisplayed2; i++) {
+    // marqueeContent2.appendChild(marqueeContent2.children[i].cloneNode(true));
+    marqueeContent2.insertAdjacentElement('afterbegin', marqueeContent2.children[i].cloneNode(true))
+    marqueeContent2.insertAdjacentElement('afterbegin', marqueeContent2.children[i].cloneNode(true))
+}
 
 /* elementos de contacto en pantalla */
 const nombre = document.querySelector("#full-name");

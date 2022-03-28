@@ -32,7 +32,17 @@
   --marquee-element-width1: calc(
     var(--marquee-width1) / var(--marquee-elements-displayed1)
   );
-  --marquee-animation-duration1: calc(var(--marquee-elements1) * 10s); }
+  --marquee-animation-duration1: calc(var(--marquee-elements1) * 10s);
+  /*segundo slider de market*/
+  --marquee-width2: 100%;
+  --marquee-height2: 20vh;
+  /* --marquee-elements: 12; */
+  /* defined with JavaScript */
+  --marquee-elements-displayed2: 1;
+  --marquee-element-width2: calc(
+    var(--marquee-width2) / var(--marquee-elements-displayed2)
+  );
+  --marquee-animation-duration2: calc(var(--marquee-elements2) * 9s); }
 
 body::-webkit-scrollbar {
   width: 12px;
@@ -285,7 +295,7 @@ input[type="checkbox"]:checked::before {
     overflow: hidden;
     position: relative;
     position: absolute;
-    transform: translateY(39px); }
+    transform: translateY(71px); }
   .home .marquee-content1 {
     list-style: none;
     height: 100%;
@@ -412,15 +422,23 @@ button#btncontacto:hover::before {
       white-space: nowrap;
       margin: 0 10px;
       color: #000; }
-  .marketers .marquee-content2 li {
-    color: #fff;
-    text-shadow: -2px -2px 0 #000, 0 -2px 0 #000, 2px -2px 0 #000, 2px 0 0 #000, 2px 2px 0 #000, 0 2px 0 #000, -2px 2px 0 #000, 2px 0 0 #000; }
+  .marketers .marquee-content2 {
+    animation: scrolling2 var(--marquee-animation-duration2) linear infinite; }
+    .marketers .marquee-content2 li {
+      color: #fff;
+      text-shadow: -2px -2px 0 #000, 0 -2px 0 #000, 2px -2px 0 #000, 2px 0 0 #000, 2px 2px 0 #000, 0 2px 0 #000, -2px 2px 0 #000, 2px 0 0 #000; }
 
 @keyframes scrolling {
   0% {
     transform: translateX(0); }
   100% {
     transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements))); } }
+
+@keyframes scrolling2 {
+  0% {
+    transform: translateX(-300%); }
+  100% {
+    transform: translateX(0); } }
 
 section.portfolio {
   padding: 108px 0;
@@ -851,6 +869,9 @@ p.parrafo2 {
             font-family: var(--fuente-poppins);
             letter-spacing: 2px;
             font-weight: 700; }
+        .menupage .container .content ul div.select-idioma li a {
+          font-weight: 300;
+          font-size: 35px; }
         .menupage .container .content ul div {
           display: flex; }
 
